@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Input Example</title>
+</head>
+<body>
+    <form>
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Get the current date
+        const today = new Date();
+
+        // Format the date to YYYY-MM-DD
+        const formattedDate = today.toISOString().split('T')[0];
+
+        // Set the value of the date input to the current date
+        document.getElementById('date').value = formattedDate;
+    </script>
+</body>
+</html> 
